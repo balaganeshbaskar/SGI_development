@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- external style sheet link -->
+    <link rel="stylesheet" type="text/css" href="styles_gallery.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <!-- google fonts CDN -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+
+  <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <title>SGI Gallery</title>
+  </head>
+    <!-- "https://upload.wikimedia.org/wikipedia/commons/7/72/G502_Overhead.jpg",
+    "https://www.thespruce.com/thmb/XCTg-TuVHfremO75PiG9pDWVhXM=/1732x974/smart/filters:no_upscale()/DrillingConcrete-bafab1ebcaef4420b72b4b5340984401.jpg",
+    "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg",
+    "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg",
+    "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg",
+    "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg",
+    "https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg",
+    "https://d3re0f381bckq9.cloudfront.net/36073871_bench-drilling-machine-13mm-7908622_600x600.jpg",
+    "https://inteng-storage.s3.amazonaws.com/img/iea/nWOVErn1wo/sizes/3dhubs-ie-sheet-metal-heade_resize_md.png",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8Qv5DaqbolCjAspmQKzjDorUNp_VWuAN4Dw&usqp=CAU",
+    "https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg",
+    "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg",
+    "https://mdbootstrap.com/img/Photos/Vertical/mountain3.jpg",
+    "https://inteng-storage.s3.amazonaws.com/img/iea/nWOVErn1wo/sizes/3dhubs-ie-sheet-metal-heade_resize_md.png",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8Qv5DaqbolCjAspmQKzjDorUNp_VWuAN4Dw&usqp=CAU",
+    "https://cdn.thefabricator.com/a/why-collaboration-is-critical-in-metal-fabrication-1533580774.jpg",
+    "https://www.safetyandhealthmagazine.com/ext/resources/images/safety-tips/welder.jpg?1483464014",
+    "https://cefabrication.com/fabrication-materials/fabrication-materials.jpg",
+    "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg",
+    "https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg",
+    "https://mdbootstrap.com/img/Photos/Vertical/mountain3.jpg",
+    "https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg" -->
+  <script>
+    var images = [
+    "https://images.pexels.com/photos/3905871/pexels-photo-3905871.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/1061141/pexels-photo-1061141.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+    "https://images.pexels.com/photos/1061140/pexels-photo-1061140.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/1061139/pexels-photo-1061139.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/2217631/pexels-photo-2217631.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/4772874/pexels-photo-4772874.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "https://images.pexels.com/photos/1061136/pexels-photo-1061136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/3905866/pexels-photo-3905866.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/1061134/pexels-photo-1061134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/1339845/pexels-photo-1339845.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://upload.wikimedia.org/wikipedia/commons/7/72/G502_Overhead.jpg",
+    "https://www.thespruce.com/thmb/XCTg-TuVHfremO75PiG9pDWVhXM=/1732x974/smart/filters:no_upscale()/DrillingConcrete-bafab1ebcaef4420b72b4b5340984401.jpg",
+    "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg",
+    "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg",
+    "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg",
+    "https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg",
+    "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg",
+    "https://d3re0f381bckq9.cloudfront.net/36073871_bench-drilling-machine-13mm-7908622_600x600.jpg",
+    "https://inteng-storage.s3.amazonaws.com/img/iea/nWOVErn1wo/sizes/3dhubs-ie-sheet-metal-heade_resize_md.png",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8Qv5DaqbolCjAspmQKzjDorUNp_VWuAN4Dw&usqp=CAU",
+    "https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg",
+    "https://www.safetyandhealthmagazine.com/ext/resources/images/safety-tips/welder.jpg?1483464014",
+    "https://cefabrication.com/fabrication-materials/fabrication-materials.jpg",
+    "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg",
+    "https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg",
+    "https://mdbootstrap.com/img/Photos/Vertical/mountain3.jpg",
+    "https://inteng-storage.s3.amazonaws.com/img/iea/nWOVErn1wo/sizes/3dhubs-ie-sheet-metal-heade_resize_md.png",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8Qv5DaqbolCjAspmQKzjDorUNp_VWuAN4Dw&usqp=CAU",
+    "https://cdn.thefabricator.com/a/why-collaboration-is-critical-in-metal-fabrication-1533580774.jpg",
+    "https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg",
+    "https://mdbootstrap.com/img/Photos/Vertical/mountain3.jpg",
+    "https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg"
+    ]; 
+
+    function loadImages()
+    {
+
+        var w = window.innerWidth;
+        var h = window.innerHeight;
+
+        // Gallery Columns
+        var column1 = document.createElement("div");
+        column1.className = "col-lg-4 col-md-12 mb-4 mb-lg-0";
+
+        var column2 = document.createElement("div");
+        column2.className = "col-lg-4 col-md-12 mb-4 mb-lg-0";
+
+        var column3 = document.createElement("div");
+        column3.className = "col-lg-4 col-md-12 mb-4 mb-lg-0";
+
+        // Adding images to respective columns
+        for(var i = 0; i < images.length; i++)
+        {
+            var img = document.createElement('img');
+            img.className = "w-100 shadow-1-strong rounded mb-4 zoom";
+            img.src = images[i];
+
+            if(w > 500)
+            {
+              var str1 = "currentSlide(";
+              var str2 = i+1;
+              var str3 = ");"
+              var res = str1.concat(str2, str3);
+              img.setAttribute('onclick', res);
+              img.setAttribute('data-toggle', 'modal');
+              img.setAttribute('data-target', '#myModal');
+            }
+
+            switch(i%3)
+            {
+              case 0:
+                column1.appendChild(img);
+                break;
+
+              case 1:
+                column2.appendChild(img);
+                break;
+
+              case 2:
+                column3.appendChild(img);
+                break;
+
+              default:
+                console.log("Error from loadImages() - Switch statement!");
+            }
+
+            // Adding columns to gallery 
+            document.getElementById("gallerypics").appendChild(column1);
+            document.getElementById("gallerypics").appendChild(column2);
+            document.getElementById("gallerypics").appendChild(column3);
+
+        }
+
+
+        // // Getting all empty image holder
+        // var allimages = document.getElementsByClassName("rounded"); 
+        // for(var i = 0; i < images.length; i++) // assigning images to the empty holders.
+        // {
+        //   allimages[i].src = images[i];
+        // }
+
+        for(var i = 0; i < images.length; i++)
+        {
+            if(i == 0) // first slide set to be active
+            {
+                var outer_div = document.createElement("div");
+                outer_div.className = "carousel-item active";              
+            }
+            else
+            {
+                var outer_div = document.createElement("div");
+                outer_div.className = "carousel-item";
+            }    
+
+            var inner_div = document.createElement("div");
+            inner_div.className = "parent d-flex justify-content-center";
+
+            var img = document.createElement('img');
+            img.className = "d-block zoom";
+            img.src = images[i];
+
+            inner_div.appendChild(img);
+            outer_div.appendChild(inner_div);
+            document.getElementById("carousel-inner").appendChild(outer_div);
+
+        }
+    }
+
+    // Carousel slideshow control
+
+    var slideIndex = 1; 
+    // Next/previous controls
+    function plusSlides(n)
+    {
+      console.log("calling plusSlides!");
+      showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n)
+    {
+      console.log("calling currentSlide!");
+      showSlides(slideIndex = n);
+    }
+
+
+    function showSlides(n)
+    {
+      console.log("n: ");
+      console.log(n);
+      var i;
+      var slides = document.getElementsByClassName("carousel-item");
+      console.log("slides: ");
+        console.log(slides);
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) 
+      {
+        slides[i].style.display = "none";
+      }
+      slides[slideIndex-1].style.display = "block";
+    }
+
+  </script>
+
+  <body onload="loadImages()">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
+        <!-- #19D9FD -->
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><b>SGI</b></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="facilities.html"><b>Facilities</b><span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="gallery.html"><b>Gallery</b><span class="sr-only"></span></a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a href="contact.html" style="color: white; font-weight: 700;"><img src="https://img.icons8.com/android/24/ffffff/phone.png"  style="height: 30px; padding-right: 10px;"/>Contact Us</a>
+                    </li>
+                </ul>
+                <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+            </form>
+            </div>
+        </div>
+      </nav>
+
+
+      <div class="container">
+        
+        <!-- Gallery Section -->
+         <section class="page-section gallery">
+            <div class="title"> <!-- Title Code -->
+              <div>
+                <h1><b>Gallery</b></h1>
+                 <span class="accent-bar"></span>
+              </div>
+              <h5>Check out some interesting projects we have completed so far</h5>
+            </div>
+
+            <div class="row" id="gallerypics">
+
+                
+            </div>
+        </section>  
+
+        <div id="myModal" class="modal fade"  role="dialog" data-backdrop="static"> 
+          <div class="modal-dialog modal-xl">
+             <div class="modal-content">
+                  <div class="modal-header"> 
+                       <button type="button" class="close" data-dismiss="modal">&times;</button> 
+                  </div>  
+                  <div class="modal-body text-center">
+                    <!-- <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg"> -->
+
+                    <!-- Carousel -->
+                      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- <ol class="carousel-indicators">
+                          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                          <li data-target="#myCarousel" data-slide-to="1"></li>
+                          <li data-target="#myCarousel" data-slide-to="2"></li>
+                          <li data-target="#myCarousel" data-slide-to="3"></li>
+                          <li data-target="#myCarousel" data-slide-to="4"></li>
+                          <li data-target="#myCarousel" data-slide-to="5"></li>
+                          <li data-target="#myCarousel" data-slide-to="6"></li>
+                          <li data-target="#myCarousel" data-slide-to="7"></li>
+                          <li data-target="#myCarousel" data-slide-to="8"></li>
+                        </ol> -->
+                        <div class="carousel-inner" id="carousel-inner">
+                          <!-- <div class="carousel-item active">
+                            <div class="parent d-flex justify-content-center">
+                              <img class="d-block zoom" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg">
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <div class="parent d-flex justify-content-center">
+                              <img class="d-block zoom" src="https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg">
+                            </div>
+                          </div> -->
+                        </div>
+                        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon" onclick="plusSlides(-1)" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" onclick="plusSlides(+1)" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
+                  </div>  
+             </div>  
+          </div>  
+        </div>
+
+      </div> <!-- Main content ends here -->
+
+
+
+
+
+      <!-- code for the footer -->
+        <!-- Site footer -->
+   <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          
+         <div class="col-xs-6 col-md-4">
+            <img src="images/tybon_svg/vectorpaint.svg" style="height: 100%; width: 100%;">
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <div class="col-xs-6 col-md-2">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="facilities.html">Facilities</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            
+          </div>
+          <div class="col-md-8 col-sm-6 col-xs-12" style="text-align: right;">
+            <p class="copyright-text">Copyright &copy; 2021 Powered by <a href="http://tybon.in"><img src="images/tybon_svg/vectorpaint.svg" style="width: 16%;"></a>.
+            </p>
+          </div>
+        </div>
+      </div>
+</footer>
+</body>
+</html>
